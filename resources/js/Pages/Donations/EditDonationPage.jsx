@@ -31,7 +31,7 @@ export default function EditDonationPage({ donation }) {
     };
 
     return (
-        <div className="w-full min-h-screen p-6 lg:p-12 bg-gradient-to-r from-green-200 to-teal-300 dark:from-gray-800 dark:to-gray-900 flex flex-col items-center">
+        <div className="w-full min-h-screen p-6 lg:p-12 bg-gradient-to-r from-primary-200 to-primary-300 dark:from-gray-800 dark:to-gray-900 flex flex-col items-center">
             {/* Breadcrumbs */}
             <nav className="mb-6 text-sm text-gray-500 dark:text-gray-400 w-full max-w-3xl">
                 <Link href="/" className="hover:underline">Home</Link>
@@ -63,7 +63,7 @@ export default function EditDonationPage({ donation }) {
                             aria-describedby="amountError"
                             required
                         />
-                        {errors.amount && <p id="amountError" className="text-red-500 text-sm mt-1">{errors.amount}</p>}
+                        {errors.amount && <p id="amountError" className="text-primary-500 text-sm mt-1">{errors.amount}</p>}
                     </div>
                 ) : (
                     <>
@@ -81,7 +81,7 @@ export default function EditDonationPage({ donation }) {
                                 aria-describedby="descriptionError"
                                 required
                             ></textarea>
-                            {errors.item_description && <p id="descriptionError" className="text-red-500 text-sm mt-1">{errors.item_description}</p>}
+                            {errors.item_description && <p id="descriptionError" className="text-primary-500 text-sm mt-1">{errors.item_description}</p>}
                         </div>
                         <div>
                             <label htmlFor="item_image" className="block text-lg font-semibold text-gray-700 dark:text-gray-300 mb-2">
@@ -102,7 +102,7 @@ export default function EditDonationPage({ donation }) {
                                     onError={(e) => e.target.style.display = 'none'}
                                 />
                             )}
-                            {errors.item_image && <p id="imageError" className="text-red-500 text-sm mt-1">{errors.item_image}</p>}
+                            {errors.item_image && <p id="imageError" className="text-primary-500 text-sm mt-1">{errors.item_image}</p>}
                         </div>
                     </>
                 )}
@@ -125,7 +125,7 @@ export default function EditDonationPage({ donation }) {
                                 });
                             }
                         }}
-                        className="px-8 py-3 bg-red-500 text-white font-bold rounded-lg shadow-md hover:bg-red-600 transition duration-300"
+                        className="px-8 py-3 bg-slate-500 text-white font-bold rounded-lg shadow-md hover:bg-slate-600 transition duration-300"
                         aria-label="Delete donation"
                     >
                         Hapus Donasi

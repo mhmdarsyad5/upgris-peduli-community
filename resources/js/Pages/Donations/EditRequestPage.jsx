@@ -77,7 +77,7 @@ export default function EditRequestPage({ donationRequest }) {
                         className="w-full border border-gray-300 dark:border-gray-600 rounded-lg p-3 text-gray-900 dark:text-gray-200 bg-gray-50 dark:bg-gray-700"
                         required
                     />
-                    {form.errors.title && <p className="text-red-500 text-sm mt-1">{form.errors.title}</p>}
+                    {form.errors.title && <p className="text-primary-500 text-sm mt-1">{form.errors.title}</p>}
                 </div>
 
                 <div>
@@ -90,7 +90,7 @@ export default function EditRequestPage({ donationRequest }) {
                         className="w-full border border-gray-300 dark:border-gray-600 rounded-lg p-3 text-gray-900 dark:text-gray-200 bg-gray-50 dark:bg-gray-700 h-32"
                         required
                     ></textarea>
-                    {form.errors.description && <p className="text-red-500 text-sm mt-1">{form.errors.description}</p>}
+                    {form.errors.description && <p className="text-primary-500 text-sm mt-1">{form.errors.description}</p>}
                 </div>
 
                 <div>
@@ -105,7 +105,7 @@ export default function EditRequestPage({ donationRequest }) {
                         <option value="uang">Uang</option>
                         <option value="barang">Barang</option>
                     </select>
-                    {form.errors.type && <p className="text-red-500 text-sm mt-1">{form.errors.type}</p>}
+                    {form.errors.type && <p className="text-primary-500 text-sm mt-1">{form.errors.type}</p>}
                 </div>
 
                 {form.data.type === 'barang' && (
@@ -119,7 +119,7 @@ export default function EditRequestPage({ donationRequest }) {
                             placeholder="Contoh: Baju, Celana, dll."
                             className="w-full border border-gray-300 dark:border-gray-600 rounded-lg p-3 text-gray-900 dark:text-gray-200 bg-gray-50 dark:bg-gray-700"
                         />
-                        {form.errors.category && <p className="text-red-500 text-sm mt-1">{form.errors.category}</p>}
+                        {form.errors.category && <p className="text-primary-500 text-sm mt-1">{form.errors.category}</p>}
                     </div>
                 )}
 
@@ -135,7 +135,7 @@ export default function EditRequestPage({ donationRequest }) {
                             className="w-full border border-gray-300 dark:border-gray-600 rounded-lg p-3 text-gray-900 dark:text-gray-200 bg-gray-50 dark:bg-gray-700"
                             min="0"
                         />
-                        {form.errors.target_amount && <p className="text-red-500 text-sm mt-1">{form.errors.target_amount}</p>}
+                        {form.errors.target_amount && <p className="text-primary-500 text-sm mt-1">{form.errors.target_amount}</p>}
                         <p className="text-gray-700 dark:text-gray-300 mt-2">
                             Target Pengumpulan: {form.data.target_amount ? formatCurrency(form.data.target_amount) : '0.000'}
                         </p>
@@ -152,7 +152,7 @@ export default function EditRequestPage({ donationRequest }) {
                             className="w-full border border-gray-300 dark:border-gray-600 rounded-lg p-3 text-gray-900 dark:text-gray-200 bg-gray-50 dark:bg-gray-700"
                             min="1"
                         />
-                        {form.errors.target_items && <p className="text-red-500 text-sm mt-1">{form.errors.target_items}</p>}
+                        {form.errors.target_items && <p className="text-primary-500 text-sm mt-1">{form.errors.target_items}</p>}
                     </div>
                 )}
 

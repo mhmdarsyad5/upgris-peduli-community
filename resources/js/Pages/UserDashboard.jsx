@@ -84,7 +84,7 @@ export default function Dashboard({ projects, donations, roleRequests }) {
                                                 <p className="text-gray-600 mb-2">{project.deskripsiProyek}</p>
                                                 <span
                                                     className={`inline-block px-2 py-1 rounded text-sm ${
-                                                        project.statusProyek ? 'bg-green-200 text-green-800' : 'bg-red-200 text-red-800'
+                                                        project.statusProyek ? 'bg-primary-200 text-primary-800' : 'bg-slate-200 text-slate-800'
                                                     }`}
                                                 >
                                                     Status: {project.statusProyek ? 'Aktif' : 'Tidak Aktif'}
@@ -94,7 +94,7 @@ export default function Dashboard({ projects, donations, roleRequests }) {
                                                 onClick={() => handleUnfollowProject(project.id)}
                                                 disabled={loadingProjectId === project.id}
                                                 className={`px-4 py-2 text-sm font-medium text-white rounded-lg shadow-md focus:outline-none transition ${
-                                                    loadingProjectId === project.id ? 'bg-gray-400 cursor-not-allowed' : 'bg-red-500 hover:bg-red-600'
+                                                    loadingProjectId === project.id ? 'bg-gray-400 cursor-not-allowed' : 'bg-slate-500 hover:bg-slate-600'
                                                 }`}
                                             >
                                                 {loadingProjectId === project.id ? 'Membatalkan...' : 'Batalkan Keikutsertaan'}
@@ -154,8 +154,8 @@ export default function Dashboard({ projects, donations, roleRequests }) {
                                                 </td>
                                                 <td className="px-6 py-4 border-b">
                                                     <span className={`px-2 py-1 text-xs font-semibold rounded-lg ${
-                                                        donation.status === 'approved' ? 'bg-green-100 text-green-800' :
-                                                        donation.status === 'rejected' ? 'bg-red-100 text-red-800' :
+                                                        donation.status === 'approved' ? 'bg-primary-100 text-primary-800' :
+                                                        donation.status === 'rejected' ? 'bg-slate-100 text-slate-800' :
                                                         'bg-yellow-100 text-yellow-800'
                                                     }`}>
                                                         {donation.status.charAt(0).toUpperCase() + donation.status.slice(1)}
@@ -206,8 +206,8 @@ export default function Dashboard({ projects, donations, roleRequests }) {
                                             <td className="px-6 py-4 border-b">{request.requested_role}</td>
                                             <td className="px-6 py-4 border-b capitalize">
                                                 <span className={`px-2 py-1 text-xs font-semibold rounded-lg ${
-                                                    request.status === 'approved' ? 'bg-green-100 text-green-800' :
-                                                    request.status === 'rejected' ? 'bg-red-100 text-red-800' :
+                                                    request.status === 'approved' ? 'bg-primary-100 text-primary-800' :
+                                                    request.status === 'rejected' ? 'bg-slate-100 text-slate-800' :
                                                     'bg-yellow-100 text-yellow-800'
                                                 }`}>
                                                     {request.status.charAt(0).toUpperCase() + request.status.slice(1)}
@@ -250,7 +250,7 @@ export default function Dashboard({ projects, donations, roleRequests }) {
                                             <option value="pengelola proyek">Pengelola Proyek</option>
                                             <option value="donatur receiver">Donatur Receiver</option>
                                         </select>
-                                        {errors.requested_role && <p className="mt-2 text-sm text-red-600">{errors.requested_role}</p>}
+                                        {errors.requested_role && <p className="mt-2 text-sm text-red-500">{errors.requested_role}</p>}
                                     </div>
                                     <div className="mb-4">
                                         <label htmlFor="reason" className="block text-sm font-medium text-gray-700">Alasan</label>
@@ -261,7 +261,7 @@ export default function Dashboard({ projects, donations, roleRequests }) {
                                             onChange={(e) => setData('reason', e.target.value)}
                                             className="mt-1 block w-full border-gray-300 rounded-md shadow-sm"
                                         />
-                                        {errors.reason && <p className="mt-2 text-sm text-red-600">{errors.reason}</p>}
+                                        {errors.reason && <p className="mt-2 text-sm text-red-500">{errors.reason}</p>}
                                     </div>
                                     <div className="flex justify-end">
                                         <button

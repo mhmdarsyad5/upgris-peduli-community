@@ -38,7 +38,7 @@ export default function ProjectManagerDashboard() {
                         <div className="flex justify-end mb-6">
                             <Link
                                 href={route('projects.create')}
-                                className="px-6 py-3 bg-green-500 text-white font-semibold rounded-md shadow-md hover:bg-green-600 transition duration-200 ease-in-out"
+                                className="px-6 py-3 bg-primary-500 text-white font-semibold rounded-md shadow-md hover:bg-primary-600 transition duration-200 ease-in-out"
                             >
                                 Tambah Proyek
                             </Link>
@@ -83,7 +83,7 @@ export default function ProjectManagerDashboard() {
                                                 </Link>
                                                 <button
                                                     onClick={() => handleDelete(project.id)}
-                                                    className="px-5 py-2.5 bg-red-500 text-white font-semibold rounded-md shadow-md hover:bg-red-600 transition duration-200 ease-in-out"
+                                                    className="px-5 py-2.5 bg-slate-500 text-white font-semibold rounded-md shadow-md hover:bg-slate-600 transition duration-200 ease-in-out"
                                                 >
                                                     Delete
                                                 </button>

@@ -92,7 +92,7 @@ const ProjectCreate = () => {
                         onChange={(e) => setData('namaProyek', e.target.value)}
                         className="w-full border border-gray-300 dark:border-gray-600 rounded-lg p-3 text-gray-900 dark:text-gray-200 bg-gray-50 dark:bg-gray-700"
                     />
-                    {errors.namaProyek && <span className="text-red-500 text-sm mt-1">{errors.namaProyek}</span>}
+                    {errors.namaProyek && <span className="text-primary-500 text-sm mt-1">{errors.namaProyek}</span>}
                 </div>
 
                 <div>
@@ -105,7 +105,7 @@ const ProjectCreate = () => {
                         onChange={(e) => setData('deskripsiProyek', e.target.value)}
                         className="w-full border border-gray-300 dark:border-gray-600 rounded-lg p-3 text-gray-900 dark:text-gray-200 bg-gray-50 dark:bg-gray-700 h-32"
                     />
-                    {errors.deskripsiProyek && <span className="text-red-500 text-sm mt-1">{errors.deskripsiProyek}</span>}
+                    {errors.deskripsiProyek && <span className="text-primary-500 text-sm mt-1">{errors.deskripsiProyek}</span>}
                 </div>
 
                 <div>
@@ -120,7 +120,7 @@ const ProjectCreate = () => {
                         <option value="Aktif">Aktif</option>
                         <option value="Nonaktif">Nonaktif</option>
                     </select>
-                    {errors.statusProyek && <span className="text-red-500 text-sm mt-1">{errors.statusProyek}</span>}
+                    {errors.statusProyek && <span className="text-primary-500 text-sm mt-1">{errors.statusProyek}</span>}
                 </div>
 
                 <div>
@@ -133,7 +133,7 @@ const ProjectCreate = () => {
                         onChange={(e) => setData('start_date', e.target.value)}
                         className="w-full border border-gray-300 dark:border-gray-600 rounded-lg p-3 text-gray-900 dark:text-gray-200 bg-gray-50 dark:bg-gray-700"
                     />
-                    {errors.start_date && <span className="text-red-500 text-sm mt-1">{errors.start_date}</span>}
+                    {errors.start_date && <span className="text-primary-500 text-sm mt-1">{errors.start_date}</span>}
                 </div>
 
                 <div>
@@ -147,7 +147,7 @@ const ProjectCreate = () => {
                         onChange={(e) => setData('required_participants', e.target.value)}
                         className="w-full border border-gray-300 dark:border-gray-600 rounded-lg p-3 text-gray-900 dark:text-gray-200 bg-gray-50 dark:bg-gray-700"
                     />
-                    {errors.required_participants && <span className="text-red-500 text-sm mt-1">{errors.required_participants}</span>}
+                    {errors.required_participants && <span className="text-primary-500 text-sm mt-1">{errors.required_participants}</span>}
                 </div>
 
                 <div>
@@ -158,7 +158,7 @@ const ProjectCreate = () => {
                         <span className="text-lg font-semibold">Pilih Gambar</span>
                         <input type="file" onChange={handleFileChange} className="hidden" />
                     </label>
-                    {errors.image && <span className="text-red-500 text-sm mt-1">{errors.image}</span>}
+                    {errors.image && <span className="text-primary-500 text-sm mt-1">{errors.image}</span>}
                     {preview && (
                         <div className="mt-4">
                             <img

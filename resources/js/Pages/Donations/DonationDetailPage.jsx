@@ -23,7 +23,7 @@ export default function DonationDetailPage() {
     };
 
     return (
-        <div className="min-h-screen p-6 lg:p-12 bg-gradient-to-r from-green-100 to-green-300 dark:from-gray-800 dark:to-gray-900 flex flex-col items-center">
+        <div className="min-h-screen p-6 lg:p-12 bg-gradient-to-r from-primary-100 to-primary-300 dark:from-gray-800 dark:to-gray-900 flex flex-col items-center">
             {/* Breadcrumbs */}
             <nav className="mb-6 text-sm text-gray-500 dark:text-gray-400 w-full max-w-3xl">
                 <Link href="/" className="hover:underline">Home</Link>
@@ -55,7 +55,7 @@ export default function DonationDetailPage() {
                             Kategori: {donationRequest.category}
                         </span>
                     )}
-                    <span className="px-3 py-1 text-sm font-semibold bg-green-100 dark:bg-green-700 text-green-800 dark:text-green-200 rounded">
+                    <span className="px-3 py-1 text-sm font-semibold bg-primary-100 dark:bg-primary-700 text-primary-800 dark:text-primary-200 rounded">
                         Target: {donationRequest.type === 'uang' ? formatCurrency(target) : `${target} Barang`}
                     </span>
                 </div>
@@ -70,7 +70,7 @@ export default function DonationDetailPage() {
                     </p>
                     <div className="w-full bg-gray-300 dark:bg-gray-700 rounded-full h-6">
                         <div
-                            className="bg-green-500 h-6 rounded-full transition-all duration-500"
+                            className="bg-primary-500 h-6 rounded-full transition-all duration-500"
                             style={{ width: `${progressPercentage}%` }}
                         ></div>
                     </div>

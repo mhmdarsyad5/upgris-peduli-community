@@ -106,7 +106,7 @@ export default function Dashboard() {
 
                                                         <select
                                                             name="role_name"
-                                                            className="border border-gray-300 rounded-lg p-2 text-sm focus:ring-2 focus:ring-red-400 focus:border-red-400 transition duration-150 ease-in-out text-gray-700 bg-gray-50"
+                                                            className="border border-gray-300 rounded-lg p-2 text-sm focus:ring-2 focus:ring-slate-400 focus:border-slate-400 transition duration-150 ease-in-out text-gray-700 bg-gray-50"
                                                             defaultValue=""
                                                         >
                                                             <option value="" disabled>Pilih Role untuk dihapus</option>
@@ -119,7 +119,7 @@ export default function Dashboard() {
 
                                                         <button
                                                             type="submit"
-                                                            className="px-4 py-2 bg-red-500 text-white rounded-lg text-sm hover:bg-red-600 transition duration-150 ease-in-out"
+                                                            className="px-4 py-2 bg-slate-500 text-white rounded-lg text-sm hover:bg-slate-600 transition duration-150 ease-in-out"
                                                         >
                                                             Unassign
                                                         </button>
@@ -206,13 +206,13 @@ export default function Dashboard() {
                                                     <div className="flex space-x-2">
                                                         <button
                                                             onClick={() => handleRequest(request.id, 'approve')}
-                                                            className="px-4 py-2 bg-green-500 text-white rounded-lg text-sm hover:bg-green-600 transition duration-150 ease-in-out"
+                                                            className="px-4 py-2 bg-primary-500 text-white rounded-lg text-sm hover:bg-primary-600 transition duration-150 ease-in-out"
                                                         >
                                                             Approve
                                                         </button>
                                                         <button
                                                             onClick={() => handleRequest(request.id, 'reject')}
-                                                            className="px-4 py-2 bg-red-500 text-white rounded-lg text-sm hover:bg-red-600 transition duration-150 ease-in-out"
+                                                            className="px-4 py-2 bg-slate-500 text-white rounded-lg text-sm hover:bg-slate-600 transition duration-150 ease-in-out"
                                                         >
                                                             Reject
                                                         </button>
@@ -254,13 +254,13 @@ export default function Dashboard() {
                                                 <td className="px-6 py-4 border-b flex space-x-4">
                                                     <button
                                                         onClick={() => handleAction('admin.donation-requests.approve', request.id, 'approve this request?')}
-                                                        className="px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600"
+                                                        className="px-4 py-2 bg-primary-500 text-white rounded-lg hover:bg-primary-600"
                                                     >
                                                         Approve
                                                     </button>
                                                     <button
                                                         onClick={() => handleAction('admin.donation-requests.reject', request.id, 'reject this request?')}
-                                                        className="px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600"
+                                                        className="px-4 py-2 bg-slate-500 text-white rounded-lg hover:bg-slate-600"
                                                     >
                                                         Reject
                                                     </button>

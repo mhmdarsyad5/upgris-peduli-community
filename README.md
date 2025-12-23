@@ -1,8 +1,6 @@
-<p align="center"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></p>
+# UPGRISPeduli Community
 
-# Sustainable Community Hub
-
-Sustainable Community Hub adalah platform web berbasis Laravel dan React (Inertia.js) untuk kolaborasi komunitas dalam mengelola proyek sosial, donasi, dan aktivitas relawan secara terstruktur dan transparan.
+UPGRISPeduli Community adalah platform web berbasis Laravel dan React (Inertia.js) untuk kolaborasi komunitas dalam mengelola proyek sosial, donasi, dan aktivitas relawan secara terstruktur dan transparan.
 
 ## Fitur Utama
 
@@ -17,38 +15,32 @@ Sustainable Community Hub adalah platform web berbasis Laravel dan React (Inerti
 
 ## Instalasi
 
-1. **Clone repository**
-   ```bash
-   git clone https://github.com/username/sustainable-community-hub.git
-   cd sustainable-community-hub
-   ```
-
-2. **Install dependency backend**
+1. **Install dependency backend**
    ```bash
    composer install
    ```
 
-3. **Install dependency frontend**
+2. **Install dependency frontend**
    ```bash
    npm install
    ```
 
-4. **Copy file environment**
+5. **Copy file environment**
    ```bash
    cp .env.example .env
    ```
 
-5. **Generate key**
+4. **Generate key**
    ```bash
    php artisan key:generate
    ```
 
-6. **Migrasi dan seed database**
+5. **Migrasi dan seed database**
    ```bash
    php artisan migrate --seed
    ```
 
-7. **Jalankan server**
+6. **Jalankan server**
    ```bash
    php artisan serve
    npm run dev
@@ -61,14 +53,11 @@ Sustainable Community Hub adalah platform web berbasis Laravel dan React (Inerti
 - `app/Http/Controllers/` — Controller Laravel untuk logika backend.
 - `database/seeders/` — Seeder untuk data awal (admin, role, dsb).
 
-## Kontribusi
 
-Kontribusi sangat terbuka! Silakan fork repo ini dan buat pull request untuk fitur atau perbaikan bug.
+Admin:
+admin@donasi.com
+admin123
 
-## Lisensi
-
-Proyek ini menggunakan lisensi MIT.
-
----
-
-Sustainable Community Hub membantu komunitas dan organisasi sosial mengelola kegiatan secara efektif, efisien, dan transparan dalam satu sistem terintegrasi.
+User:
+user@donasi.com
+user123

@@ -29,12 +29,12 @@ export default function Register({ onLoginClick }) {
 
             {/* Logo di bagian atas */}
             <div className="flex justify-center mb-6">
-                <ApplicationLogo className="h-16 w-16" />
+                <ApplicationLogo className="w-16" />
             </div>
 
             <form onSubmit={submit}>
                 <div>
-                    <InputLabel htmlFor="name" value="Name" />
+                    <InputLabel htmlFor="name" value="Nama" />
                     <TextInput
                         id="name"
                         name="name"
@@ -79,7 +79,7 @@ export default function Register({ onLoginClick }) {
                 </div>
 
                 <div className="mt-4">
-                    <InputLabel htmlFor="password_confirmation" value="Confirm Password" />
+                    <InputLabel htmlFor="password_confirmation" value="Konfirmasi Password" />
                     <TextInput
                         id="password_confirmation"
                         type="password"
@@ -94,7 +94,7 @@ export default function Register({ onLoginClick }) {
                 </div>
 
                 <div className="mt-4">
-                    <InputLabel htmlFor="requested_role" value="Request Role (Optional)" />
+                    <InputLabel htmlFor="requested_role" value="Permintaan Role (Opsional)" />
                     <select
                         id="requested_role"
                         name="requested_role"
@@ -102,9 +102,9 @@ export default function Register({ onLoginClick }) {
                         value={data.requested_role}
                         onChange={(e) => setData('requested_role', e.target.value)}
                     >
-                        <option value="">Select Role</option>
+                        <option value="">Pilih Role</option>
                         <option value="pengelola proyek">Project Manager</option>
-                        <option value="donatur receiver">Donation Receiver</option>
+                        <option value="donatur receiver">Penerima Donasi</option>
                     </select>
                     <InputError message={errors.requested_role} className="mt-2" />
                 </div>
@@ -112,7 +112,7 @@ export default function Register({ onLoginClick }) {
                 {/* Input Reason akan muncul jika role dipilih */}
                 {data.requested_role !== '' && (
                     <div className="mt-4">
-                        <InputLabel htmlFor="reason" value="Reason for requesting this role" />
+                        <InputLabel htmlFor="Alasan" value="Alasan memilih role ini" />
                         <TextInput
                             id="reason"
                             type="text"
@@ -136,7 +136,7 @@ export default function Register({ onLoginClick }) {
                         }}
                         className="rounded-md text-sm text-gray-600 underline hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
                     >
-                        Already registered?
+                        Sudah memiliki akun?
                     </button>
 
                     <PrimaryButton className="ms-4" disabled={processing}>

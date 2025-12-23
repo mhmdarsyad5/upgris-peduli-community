@@ -19,7 +19,7 @@ import '../../css/app.css';
 const NavLink = ({ href, children }) => (
     <Link
         href={href}
-        className="rounded-md px-4 py-2 text-gray-800 dark:text-white transition hover:text-gray-600 dark:hover:text-gray-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#FF2D20]"
+        className="rounded-md px-4 py-2 text-gray-800 dark:text-white transition hover:text-gray-600 dark:hover:text-gray-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500"
     >
         {children}
     </Link>
@@ -56,7 +56,7 @@ const Card = ({ href, imageSrc, imageAlt, title, description, children }) => (
     </a>
 );
 
-const commonButtonStyle = "inline-block px-6 py-2 bg-[#FF2D20] text-white text-sm font-medium rounded-lg transform transition-all duration-300 hover:bg-[#e0241c] hover:-translate-y-1 hover:shadow-lg";
+const commonButtonStyle = "inline-block px-6 py-2 bg-primary-500 text-white text-sm font-medium rounded-lg transform transition-all duration-300 hover:bg-primary-600 hover:-translate-y-1 hover:shadow-lg";
 
 export default function Welcome({ auth, laravelVersion, phpVersion }) {   
     const [isLoginOpen, setIsLoginOpen] = useState(false);
@@ -97,7 +97,7 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
 
     return (
         <>
-            <Head title="Sustainable Community Hub" />
+            <Head title="UPGRISPeduli Community" />
             <div className="app bg-gray-50 dark:bg-gray-900 text-gray-700 dark:text-gray-300 min-h-screen">
                 
                 {/* Header */}
@@ -105,9 +105,12 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
                 <div className="container mx-auto flex justify-between items-center">
                     
                     {/* Logo / Title */}
-                    <h1 className="text-2xl font-extrabold text-gray-900 dark:text-white">
-                        Sustainable Community Hub
-                    </h1>
+                    <div className="flex items-center">
+                        <img src="/storage/images/upgrislogo.png" alt="UPGRISPeduli Community Logo" className="h-10 mr-3"/>
+                        <h1 className="text-2xl font-extrabold text-gray-900 dark:text-white">
+                            UPGRISPeduli Community
+                        </h1>
+                    </div>
 
                     {/* Hamburger Menu Button (Mobile Only) */}
                     <button 
@@ -122,27 +125,27 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
 
                     {/* Navigation Links (Visible on Desktop) */}
                     <nav className="hidden md:flex flex-grow justify-center space-x-6 text-gray-700 dark:text-gray-300">
-                        <a href="#" className="text-[#FF2D20] font-semibold border-b-2 border-[#FF2D20] hover:border-[#e0241c] transition duration-200">
+                        <a href="#" className="text-primary-500 font-semibold border-b-2 border-primary-500 hover:border-primary-600 transition duration-200">
                             Home
                         </a>
-                        <a href={route('projects.index')} className="hover:text-[#FF2D20] transition-colors duration-200">
+                        <a href={route('projects.index')} className="hover:text-primary-500 transition-colors duration-200">
                             Event
                         </a>
-                        <a href={route('donation-requests.index')} className="hover:text-[#FF2D20] transition-colors duration-200">
+                        <a href={route('donation-requests.index')} className="hover:text-primary-500 transition-colors duration-200">
                             Donasi
                         </a>
-                        <a href="#" className="hover:text-[#FF2D20] transition-colors duration-200">
+                        {/* <a href="#" className="hover:text-primary-500 transition-colors duration-200">
                             Forum Diskusi
                         </a>
-                        <a href="#" className="hover:text-[#FF2D20] transition-colors duration-200">
+                        <a href="#" className="hover:text-primary-500 transition-colors duration-200">
                             Artikel
                         </a>
-                        <a href="#" className="hover:text-[#FF2D20] transition-colors duration-200">
+                        <a href="#" className="hover:text-primary-500 transition-colors duration-200">
                             Peta
                         </a>
-                        <a href="#" className="hover:text-[#FF2D20] transition-colors duration-200">
+                        <a href="#" className="hover:text-primary-500 transition-colors duration-200">
                             Kalender
-                        </a>
+                        </a> */}
                     </nav>
 
                     {/* Authentication Links - Desktop */}
@@ -152,28 +155,28 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
                                 auth.user.roles.some(role => role.name === 'admin') ? (
                                     <Link
                                         href={route('admin.dashboard')}
-                                        className="text-gray-800 dark:text-white hover:text-[#FF2D20] font-semibold transition-colors duration-300"
+                                        className="text-gray-800 dark:text-white hover:text-primary-500 font-semibold transition-colors duration-300"
                                     >
                                         Dashboard
                                     </Link>
                                 ) : auth.user.roles.some(role => role.name === 'pengelola proyek') ? (
                                     <Link
                                         href={route('project-manager.dashboard')}
-                                        className="text-gray-800 dark:text-white hover:text-[#FF2D20] font-semibold transition-colors duration-300"
+                                        className="text-gray-800 dark:text-white hover:text-primary-500 font-semibold transition-colors duration-300"
                                     >
                                         Dashboard
                                     </Link>
                                 ) : auth.user.roles.some(role => role.name === 'donatur receiver') ? (
                                     <Link
                                         href={route('donation-receiver.dashboard')}
-                                        className="text-gray-800 dark:text-white hover:text-[#FF2D20] font-semibold transition-colors duration-300"
+                                        className="text-gray-800 dark:text-white hover:text-primary-500 font-semibold transition-colors duration-300"
                                     >
                                         Dashboard
                                     </Link>
                                 ) : (
                                     <Link
                                         href={route('dashboard')}
-                                        className="text-gray-800 dark:text-white hover:text-[#FF2D20] font-semibold transition-colors duration-300"
+                                        className="text-gray-800 dark:text-white hover:text-primary-500 font-semibold transition-colors duration-300"
                                     >
                                         Dashboard
                                     </Link>
@@ -183,13 +186,13 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
                             <>
                                 <button
                                     onClick={() => setIsLoginOpen(true)}
-                                    className="text-gray-800 dark:text-white hover:text-[#FF2D20] font-semibold transition-colors duration-300"
+                                    className="text-gray-800 dark:text-white hover:text-primary-500 font-semibold transition-colors duration-300"
                                 >
                                     Log in
                                 </button>
                                 <button
                                     onClick={() => setIsRegisterOpen(true)}
-                                    className="text-gray-800 dark:text-white hover:text-[#FF2D20] font-semibold transition-colors duration-300"
+                                    className="text-gray-800 dark:text-white hover:text-primary-500 font-semibold transition-colors duration-300"
                                 >
                                     Register
                                 </button>
@@ -210,42 +213,42 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
                     className="md:hidden"
                 >
                     <nav className="flex flex-col space-y-4 p-6 bg-gray-800 text-white rounded-lg shadow-lg">
-                        <a href="#" className="text-[#FF2D20] font-semibold border-b-2 border-[#FF2D20] hover:border-[#e0241c] transition duration-300">Home</a>
-                        <a href={route('projects.index')} className="hover:text-[#FF2D20] transition-colors duration-200">Event</a>
-                        <a href={route('donation-requests.index')} className="hover:text-[#FF2D20] transition-colors duration-200">Donasi</a>
-                        <a href="#" className="hover:text-[#FF2D20] transition-colors duration-200">Forum Diskusi</a>
-                        <a href="#" className="hover:text-[#FF2D20] transition-colors duration-200">Artikel</a>
-                        <a href="#" className="hover:text-[#FF2D20] transition-colors duration-200">Peta</a>
-                        <a href="#" className="hover:text-[#FF2D20] transition-colors duration-200">Kalender</a>
+                        <a href="#" className="text-primary-500 font-semibold border-b-2 border-primary-500 hover:border-primary-600 transition duration-300">Home</a>
+                        <a href={route('projects.index')} className="hover:text-primary-500 transition-colors duration-200">Event</a>
+                        <a href={route('donation-requests.index')} className="hover:text-primary-500 transition-colors duration-200">Donasi</a>
+                        {/* <a href="#" className="hover:text-primary-500 transition-colors duration-200">Forum Diskusi</a>
+                        <a href="#" className="hover:text-primary-500 transition-colors duration-200">Artikel</a>
+                        <a href="#" className="hover:text-primary-500 transition-colors duration-200">Peta</a>
+                        <a href="#" className="hover:text-primary-500 transition-colors duration-200">Kalender</a> */}
                         
                         {/* Authentication Links for Mobile */}
                         <div className="mt-6 flex flex-col space-y-2 border-t border-gray-600 pt-4">
                             {auth.user ? (
                                 auth.user.roles && (
                                     auth.user.roles.some(role => role.name === 'admin') ? (
-                                        <Link href={route('admin.dashboard')} className="hover:text-[#FF2D20]">
+                                        <Link href={route('admin.dashboard')} className="hover:text-primary-500">
                                             Dashboard
                                         </Link>
                                     ) : auth.user.roles.some(role => role.name === 'pengelola proyek') ? (
-                                        <Link href={route('project-manager.dashboard')} className="hover:text-[#FF2D20]">
+                                        <Link href={route('project-manager.dashboard')} className="hover:text-primary-500">
                                             Dashboard
                                         </Link>
                                     ) : auth.user.roles.some(role => role.name === 'donatur receiver') ? (
-                                        <Link href={route('donation-receiver.dashboard')} className="hover:text-[#FF2D20]">
+                                        <Link href={route('donation-receiver.dashboard')} className="hover:text-primary-500">
                                             Dashboard
                                         </Link>
                                     ) : (
-                                        <Link href={route('dashboard')} className="hover:text-[#FF2D20]">
+                                        <Link href={route('dashboard')} className="hover:text-primary-500">
                                             Dashboard
                                         </Link>
                                     )
                                 )
                             ) : (
                                 <>
-                                    <button onClick={() => setIsLoginOpen(true)} className="text-gray-300 hover:text-[#FF2D20] font-semibold">
+                                    <button onClick={() => setIsLoginOpen(true)} className="text-gray-300 hover:text-primary-500 font-semibold">
                                         Log in
                                     </button>
-                                    <button onClick={() => setIsRegisterOpen(true)} className="text-gray-300 hover:text-[#FF2D20] font-semibold mt-1">
+                                    <button onClick={() => setIsRegisterOpen(true)} className="text-gray-300 hover:text-primary-500 font-semibold mt-1">
                                         Register
                                     </button>
                                 </>
@@ -304,13 +307,13 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
                     </Modal>
 
                     {/* Hero Section */}
-                    <HeroCarousel slides={slides} searchPlaceholder="Cari inisiatif hijau di dekat Anda" className="scroll-animate fade-in"/>
+                    <HeroCarousel slides={slides} searchPlaceholder="Yuk cari inisiatif di sekitar kamu" className="scroll-animate fade-in"/>
 
-                    <SectionSeparator text="Aksi Nyata untuk Masa Depan yang Lebih Hijau" className="scroll-animate fade-in" />
+                    <SectionSeparator text="Aksi Nyata untuk Masa Depan" className="scroll-animate fade-in" />
 
                     {/* Impact Section */}
                     <section className="impact-section py-16 text-center bg-gray-50 dark:bg-gray-900 scroll-animate fade-in-up">
-                        <h2 className="text-4xl font-extrabold mb-8 text-gray-800 dark:text-white hover:text-[#FF2D20] transition-all duration-300 transform hover:scale-110">
+                        <h2 className="text-4xl font-extrabold mb-8 text-gray-800 dark:text-white hover:text-primary-500 transition-all duration-300 transform hover:scale-110">
                             Dampak Positif yang Telah Kita Ciptakan
                         </h2>
                         <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
@@ -330,7 +333,7 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
                                     transition-all duration-300 ease-in-out 
                                     cursor-pointer`}
                                 >
-                                    <h3 className="text-3xl font-semibold text-green-600 dark:text-green-300 hover:text-[#FF2D20] dark:hover:text-[#FF2D20] transition-all duration-300 transform hover:scale-110">
+                                    <h3 className="text-3xl font-semibold text-primary-600 dark:text-primary-300 hover:text-primary-500 dark:hover:text-primary-500 transition-all duration-300 transform hover:scale-110">
                                         {impact.count}
                                     </h3>
                                     <p className="text-lg text-gray-700 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 transition-all duration-300 transform hover:scale-110">
@@ -352,7 +355,7 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
 
                     {/* How to Help Section */}
                     <section className="how-to-help py-16 text-center bg-gray-50 dark:bg-gray-900 scroll-animate fade-in-up">
-                        <h2 className="text-4xl font-extrabold mb-8 text-gray-800 dark:text-white hover:text-[#FF2D20] transition-all duration-500 ease-in-out transform hover:scale-105">
+                        <h2 className="text-4xl font-extrabold mb-8 text-gray-800 dark:text-white hover:text-primary-500 transition-all duration-500 ease-in-out transform hover:scale-105">
                             Bagaimana Anda Bisa Membantu
                         </h2>
                         <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
@@ -386,14 +389,14 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
                                         dark:hover:bg-gradient-to-b dark:hover:from-gray-800 dark:hover:to-gray-700
                                         cursor-pointer
                                         border border-transparent
-                                        hover:border-[#FF2D20]
+                                        hover:border-primary-500
                                         group
                                     `}
                                 >
                                     <div className="text-4xl mb-4 transform transition-all duration-500 group-hover:scale-110">
                                         {help.icon}
                                     </div>
-                                    <h3 className="text-2xl font-semibold text-gray-800 dark:text-white mb-2 transition-all duration-500 group-hover:text-[#FF2D20]">
+                                    <h3 className="text-2xl font-semibold text-gray-800 dark:text-white mb-2 transition-all duration-500 group-hover:text-primary-500">
                                         {help.title}
                                     </h3>
                                     <p className="text-gray-600 dark:text-gray-400 transition-all duration-500 group-hover:text-gray-800 dark:group-hover:text-gray-200">
@@ -408,7 +411,7 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
                     <DonationBanner className="scroll-animate fade-in"/>
 
                     {/* Information Cards Section */}
-                    <section className="information-cards py-16 px-8 bg-gray-50 dark:bg-gray-900">
+                    {/* <section className="information-cards py-16 px-8 bg-gray-50 dark:bg-gray-900">
                         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
                             {[
                                 {
@@ -435,10 +438,10 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
                                 </div>
                             ))}
                         </div>
-                    </section>
+                    </section> */}
 
                     {/* Upcoming Events Section */}
-                    <section className="upcoming-events py-16 px-8 bg-white dark:bg-gray-800">
+                    {/* <section className="upcoming-events py-16 px-8 bg-white dark:bg-gray-800">
                         <div className="max-w-7xl mx-auto">
                             <SectionHeader title="Event Terdekat" />
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-8">
@@ -468,7 +471,7 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
                                 ))}
                             </div>
                         </div>
-                    </section>
+                    </section> */}
 
                     {/* News and Articles Section */}
                     <section className="news-articles py-16 px-8 bg-gray-50 dark:bg-gray-900">
@@ -507,16 +510,16 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
                 <footer className="footer py-12 px-6 bg-gray-800 text-gray-300 flex flex-col md:flex-row justify-between items-center space-y-8 md:space-y-0">
                     {/* Left Section - Information */}
                     <div className="footer-info text-center md:text-left">
-                        <h2 className="text-2xl font-bold text-white">Sustainable Community</h2>
-                        <p className="mt-2 text-sm">Komunitas Perubahan Sejak 2024</p>
-                        <p className="mt-4 text-xs text-gray-400">© 2024 Sustainable Community Hub. All rights reserved.</p>
+                        <h2 className="text-2xl font-bold text-white">UPGRISPeduli Community</h2>
+                        <p className="mt-2 text-sm">Komunitas Perubahan Mahasiswa UPGRIS</p>
+                        <p className="mt-4 text-xs text-gray-400">© 2025 UPGRISPeduli Community. All rights reserved.</p>
                     </div>
 
                     {/* Center Section - CTA to Donate */}
                     <div className="footer-cta text-center md:text-left">
                         <h3 className="text-lg font-semibold text-white mb-2">Bantu Kami Menjaga Lingkungan</h3>
                         <p className="text-sm text-gray-300 mb-4">Setiap donasi membantu kami menciptakan perubahan nyata bagi lingkungan.</p>
-                        <button className="px-6 py-2 bg-[#FF2D20] text-white font-semibold rounded-full hover:bg-[#e0241c] shadow-lg transition ease-in-out duration-300 transform hover:scale-105"
+                        <button className="px-6 py-2 bg-primary-500 text-white font-semibold rounded-full hover:bg-primary-600 shadow-lg transition ease-in-out duration-300 transform hover:scale-105"
                                 onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
                             Donasi Sekarang
                         </button>

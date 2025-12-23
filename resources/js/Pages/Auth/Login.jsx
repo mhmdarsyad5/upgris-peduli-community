@@ -25,11 +25,11 @@ export default function Login({ status, canResetPassword, onForgotPasswordClick 
             <Head title="Log in" />
             {/* Logo */}
             <div className="flex justify-center mb-6">
-                <ApplicationLogo className="h-16 w-16" />
+                <ApplicationLogo className="w-16" />
             </div>
 
             {status && (
-                <div className="mb-4 text-sm font-medium text-green-600">
+                <div className="mb-4 text-sm font-medium text-primary-600">
                     {status}
                 </div>
             )}
@@ -72,7 +72,7 @@ export default function Login({ status, canResetPassword, onForgotPasswordClick 
                             onChange={(e) => setData('remember', e.target.checked)}
                         />
                         <span className="ml-2 text-sm text-gray-600">
-                            Remember me
+                            Ingat saya
                         </span>
                     </label>
                 </div>
@@ -85,7 +85,7 @@ export default function Login({ status, canResetPassword, onForgotPasswordClick 
                             className="rounded-md text-sm text-gray-600 underline hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
                             style={{ display: 'inline', visibility: 'visible' }} // Tambahkan ini untuk memastikan teks terlihat
                         >
-                            Forgot your password?
+                            Lupa password?
                         </button>                    
                     )}
                     <PrimaryButton className="ml-4" disabled={processing}>

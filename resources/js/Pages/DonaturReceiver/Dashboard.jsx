@@ -59,7 +59,7 @@ export default function DashboardDonationReceiverPage() {
                     <div className="relative">
                         <Link
                             href={route('donation-requests.create')}
-                            className="absolute right-0 px-4 py-2 bg-[#FF2D20] text-white font-semibold rounded-lg hover:bg-[#e0241c] transition ease-in-out duration-150"
+                            className="absolute right-0 px-4 py-2 bg-primary-500 text-white font-semibold rounded-lg hover:bg-primary-600 transition ease-in-out duration-150"
                         >
                             Buat Permintaan Donasi Baru
                         </Link>
@@ -91,8 +91,8 @@ export default function DashboardDonationReceiverPage() {
                                                 </td>
                                                 <td className="px-6 py-4 border-b">
                                                     <span className={`px-2 py-1 text-xs font-semibold rounded-lg ${
-                                                        request.status === 'approved' ? 'bg-green-100 text-green-800' :
-                                                        request.status === 'rejected' ? 'bg-red-100 text-red-800' :
+                                                        request.status === 'approved' ? 'bg-primary-100 text-primary-800' :
+                                                        request.status === 'rejected' ? 'bg-slate-100 text-slate-800' :
                                                         'bg-yellow-100 text-yellow-800'
                                                     }`}>
                                                         {request.status.charAt(0).toUpperCase() + request.status.slice(1)}
@@ -113,7 +113,7 @@ export default function DashboardDonationReceiverPage() {
                                                     </Link>
                                                     <button
                                                         onClick={() => handleDelete(request.id)}
-                                                        className="px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition duration-150 ease-in-out"
+                                                        className="px-4 py-2 bg-slate-500 text-white rounded-lg hover:bg-slate-600 transition duration-150 ease-in-out"
                                                     >
                                                         Hapus
                                                     </button>

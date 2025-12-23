@@ -67,7 +67,7 @@ export default function CreateRequestPage() {
                         className="w-full border border-gray-300 dark:border-gray-600 rounded-lg p-3 text-gray-900 dark:text-gray-200 bg-gray-50 dark:bg-gray-700"
                         required
                     />
-                    {errors.title && <p className="text-red-500 text-sm mt-1">{errors.title}</p>}
+                    {errors.title && <p className="text-primary-500 text-sm mt-1">{errors.title}</p>}
                 </div>
 
                 <div>
@@ -80,7 +80,7 @@ export default function CreateRequestPage() {
                         className="w-full border border-gray-300 dark:border-gray-600 rounded-lg p-3 text-gray-900 dark:text-gray-200 bg-gray-50 dark:bg-gray-700 h-32"
                         required
                     ></textarea>
-                    {errors.description && <p className="text-red-500 text-sm mt-1">{errors.description}</p>}
+                    {errors.description && <p className="text-primary-500 text-sm mt-1">{errors.description}</p>}
                 </div>
 
                 <div>
@@ -95,7 +95,7 @@ export default function CreateRequestPage() {
                         <option value="uang">Uang</option>
                         <option value="barang">Barang</option>
                     </select>
-                    {errors.type && <p className="text-red-500 text-sm mt-1">{errors.type}</p>}
+                    {errors.type && <p className="text-primary-500 text-sm mt-1">{errors.type}</p>}
                 </div>
 
                 {data.type !== 'uang' && (
@@ -110,7 +110,7 @@ export default function CreateRequestPage() {
                             className="w-full border border-gray-300 dark:border-gray-600 rounded-lg p-3 text-gray-900 dark:text-gray-200 bg-gray-50 dark:bg-gray-700"
                             required
                         />
-                        {errors.category && <p className="text-red-500 text-sm mt-1">{errors.category}</p>}
+                        {errors.category && <p className="text-primary-500 text-sm mt-1">{errors.category}</p>}
                     </div>
                 )}
 
@@ -130,7 +130,7 @@ export default function CreateRequestPage() {
                             min="0"
                             required
                         />
-                        {errors.target_amount && <p className="text-red-500 text-sm mt-1">{errors.target_amount}</p>}
+                        {errors.target_amount && <p className="text-primary-500 text-sm mt-1">{errors.target_amount}</p>}
                         <p className="text-gray-700 dark:text-gray-300 mt-2">
                             Target Pengumpulan: {data.target_amount ? formatCurrency(data.target_amount) : '0.000'}
                         </p>
@@ -149,7 +149,7 @@ export default function CreateRequestPage() {
                             min="1"
                             required
                         />
-                        {errors.target_items && <p className="text-red-500 text-sm mt-1">{errors.target_items}</p>}
+                        {errors.target_items && <p className="text-primary-500 text-sm mt-1">{errors.target_items}</p>}
                     </div>
                 )}
 

@@ -46,7 +46,7 @@ export default function ProjectDetail() {
         <>
             <Head title={project.namaProyek} />
 
-            <div className="bg-gradient-to-r from-green-300 via-blue-300 to-purple-400 min-h-screen p-6 lg:p-12 flex justify-center">
+            <div className="bg-gradient-to-r from-primary-300 via-primary-500 to-primary-700 min-h-screen p-6 lg:p-12 flex justify-center">
                 <div className="container max-w-5xl mx-auto p-8 lg:p-12 bg-white dark:bg-gray-800 rounded-xl shadow-2xl ring-1 ring-gray-300 dark:ring-gray-700 transition duration-300 ease-in-out space-y-8">
 
                     {/* Breadcrumbs */}
@@ -118,7 +118,7 @@ export default function ProjectDetail() {
                             className={`px-6 py-2 ${
                                 isProjectInactive || isVolunteer || project.participant_count >= project.required_participants || isLoading
                                     ? 'bg-gray-400 cursor-not-allowed'
-                                    : 'bg-[#FF2D20] hover:bg-[#e0241c]'
+                                    : 'bg-primary-500 hover:bg-primary-600'
                             } text-white font-semibold rounded-lg shadow-md transition ease-in-out duration-200`}
                         >
                             {isProjectInactive 

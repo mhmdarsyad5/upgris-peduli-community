@@ -16,10 +16,10 @@ class AdminSeeder extends Seeder
     {
         // Temukan atau buat pengguna admin
         $user = User::firstOrCreate([
-            'email' => 'admin@example.com', // Ganti dengan email admin
+            'email' => 'admin@donasi.com', // Ganti dengan email admin
         ], [
             'name' => 'Admin',
-            'password' => bcrypt('password'), // Ganti dengan password admin
+            'password' => bcrypt('admin123'), // Ganti dengan password admin
         ]);
 
         // Temukan atau buat role admin

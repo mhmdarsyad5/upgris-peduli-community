@@ -16,7 +16,7 @@ import '../../css/app.css';
 const NavLink = ({ href, children }) => (
     <Link
         href={href}
-        className="rounded-md px-4 py-2 text-gray-800 dark:text-white transition hover:text-gray-600 dark:hover:text-gray-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#FF2D20]"
+        className="rounded-md px-4 py-2 text-gray-800 dark:text-white transition hover:text-gray-600 dark:hover:text-gray-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500"
     >
         {children}
     </Link>
@@ -152,7 +152,7 @@ const ProjectList = ({ auth, laravelVersion, phpVersion, isLoading}) => {
 
     return (
         <>
-            <Head title="Sustainable Community Hub" />
+            <Head title="UPGRISPeduli Community" />
             <div className="app bg-gray-50 dark:bg-gray-900 text-gray-700 dark:text-gray-300 min-h-screen">
                 
                 {/* Header */}
@@ -160,9 +160,12 @@ const ProjectList = ({ auth, laravelVersion, phpVersion, isLoading}) => {
                 <div className="container mx-auto flex justify-between items-center">
                     
                     {/* Logo / Title */}
-                    <h1 className="text-2xl font-extrabold text-gray-900 dark:text-white">
-                        Sustainable Community Hub
-                    </h1>
+                    <div className="flex items-center">
+                        <img src="/storage/images/upgrislogo.png" alt="UPGRISPeduli Community Logo" className="h-10 mr-3"/>
+                        <h1 className="text-2xl font-extrabold text-gray-900 dark:text-white">
+                            UPGRISPeduli Community
+                        </h1>
+                    </div>
 
                     {/* Hamburger Menu Button (Mobile Only) */}
                     <button 
@@ -177,27 +180,27 @@ const ProjectList = ({ auth, laravelVersion, phpVersion, isLoading}) => {
 
                     {/* Navigation Links (Visible on Desktop) */}
                     <nav className="hidden md:flex flex-grow justify-center space-x-6 text-gray-700 dark:text-gray-300">
-                        <a href={route('home')} className="hover:text-[#FF2D20] font-semibold transition-colors duration-300">
+                        <a href={route('home')} className="hover:text-primary-500 font-semibold transition-colors duration-300">
                             Home
                         </a>
-                        <a href="#" className="text-[#FF2D20] font-semibold border-b-2 border-[#FF2D20] hover:border-[#e0241c] transition duration-300">
+                        <a href="#" className="text-primary-500 font-semibold border-b-2 border-primary-500 hover:border-primary-600 transition duration-300">
                             Event
                         </a>
-                        <a href={route('donation-requests.index')} className="hover:text-[#FF2D20] font-semibold transition-colors duration-300">
+                        <a href={route('donation-requests.index')} className="hover:text-primary-500 font-semibold transition-colors duration-300">
                             Donasi
                         </a>
-                        <a href="#" className="hover:text-[#FF2D20] font-semibold transition-colors duration-300">
+                        {/* <a href="#" className="hover:text-primary-500 font-semibold transition-colors duration-300">
                             Forum Diskusi
                         </a>
-                        <a href="#" className="hover:text-[#FF2D20] font-semibold transition-colors duration-300">
+                        <a href="#" className="hover:text-primary-500 font-semibold transition-colors duration-300">
                             Artikel
                         </a>
-                        <a href="#" className="hover:text-[#FF2D20] font-semibold transition-colors duration-300">
+                        <a href="#" className="hover:text-primary-500 font-semibold transition-colors duration-300">
                             Peta
                         </a>
-                        <a href="#" className="hover:text-[#FF2D20] font-semibold transition-colors duration-300">
+                        <a href="#" className="hover:text-primary-500 font-semibold transition-colors duration-300">
                             Kalender
-                        </a>
+                        </a> */}
                     </nav>
 
                     {/* Authentication Links - Desktop */}
@@ -207,28 +210,28 @@ const ProjectList = ({ auth, laravelVersion, phpVersion, isLoading}) => {
                                 auth.user.roles.some(role => role.name === 'admin') ? (
                                     <Link
                                         href={route('admin.dashboard')}
-                                        className="text-gray-800 dark:text-white hover:text-[#FF2D20] font-semibold transition-colors duration-300"
+                                        className="text-gray-800 dark:text-white hover:text-primary-500 font-semibold transition-colors duration-300"
                                     >
                                         Dashboard
                                     </Link>
                                 ) : auth.user.roles.some(role => role.name === 'pengelola proyek') ? (
                                     <Link
                                         href={route('project-manager.dashboard')}
-                                        className="text-gray-800 dark:text-white hover:text-[#FF2D20] font-semibold transition-colors duration-300"
+                                        className="text-gray-800 dark:text-white hover:text-primary-500 font-semibold transition-colors duration-300"
                                     >
                                         Dashboard
                                     </Link>
                                 ) : auth.user.roles.some(role => role.name === 'donatur receiver') ? (
                                     <Link
                                         href={route('donation-receiver.dashboard')}
-                                        className="text-gray-800 dark:text-white hover:text-[#FF2D20] font-semibold transition-colors duration-300"
+                                        className="text-gray-800 dark:text-white hover:text-primary-500 font-semibold transition-colors duration-300"
                                     >
                                         Dashboard
                                     </Link>
                                 ) : (
                                     <Link
                                         href={route('dashboard')}
-                                        className="text-gray-800 dark:text-white hover:text-[#FF2D20] font-semibold transition-colors duration-300"
+                                        className="text-gray-800 dark:text-white hover:text-primary-500 font-semibold transition-colors duration-300"
                                     >
                                         Dashboard
                                     </Link>
@@ -238,13 +241,13 @@ const ProjectList = ({ auth, laravelVersion, phpVersion, isLoading}) => {
                             <>
                                 <button
                                     onClick={() => setIsLoginOpen(true)}
-                                    className="text-gray-800 dark:text-white hover:text-[#FF2D20] font-semibold transition-colors duration-300"
+                                    className="text-gray-800 dark:text-white hover:text-primary-500 font-semibold transition-colors duration-300"
                                 >
                                     Log in
                                 </button>
                                 <button
                                     onClick={() => setIsRegisterOpen(true)}
-                                    className="text-gray-800 dark:text-white hover:text-[#FF2D20] font-semibold transition-colors duration-300"
+                                    className="text-gray-800 dark:text-white hover:text-primary-500 font-semibold transition-colors duration-300"
                                 >
                                     Register
                                 </button>
@@ -265,42 +268,42 @@ const ProjectList = ({ auth, laravelVersion, phpVersion, isLoading}) => {
                     className="md:hidden"
                 >
                     <nav className="flex flex-col space-y-4 p-6 bg-gray-800 text-white rounded-lg shadow-lg">
-                        <a href={route('home')} className="hover:text-[#FF2D20] font-semibold transition-colors duration-300">Home</a>
-                        <a href="#" className="text-[#FF2D20] font-semibold border-b-2 border-[#FF2D20] hover:border-[#e0241c] transition duration-300">Event</a>
-                        <a href={route('donation-requests.index')} className="hover:text-[#FF2D20] font-semibold transition-colors duration-300">Donasi</a>
-                        <a href="#" className="hover:text-[#FF2D20] font-semibold transition-colors duration-300">Forum Diskusi</a>
-                        <a href="#" className="hover:text-[#FF2D20] font-semibold transition-colors duration-300">Artikel</a>
-                        <a href="#" className="hover:text-[#FF2D20] font-semibold transition-colors duration-300">Peta</a>
-                        <a href="#" className="hover:text-[#FF2D20] font-semibold transition-colors duration-300">Kalender</a>
+                        <a href={route('home')} className="hover:text-primary-500 font-semibold transition-colors duration-300">Home</a>
+                        <a href="#" className="text-primary-500 font-semibold border-b-2 border-primary-500 hover:border-primary-600 transition duration-300">Event</a>
+                        <a href={route('donation-requests.index')} className="hover:text-primary-500 font-semibold transition-colors duration-300">Donasi</a>
+                        {/* <a href="#" className="hover:text-primary-500 font-semibold transition-colors duration-300">Forum Diskusi</a>
+                        <a href="#" className="hover:text-primary-500 font-semibold transition-colors duration-300">Artikel</a>
+                        <a href="#" className="hover:text-primary-500 font-semibold transition-colors duration-300">Peta</a>
+                        <a href="#" className="hover:text-primary-500 font-semibold transition-colors duration-300">Kalender</a> */}
                         
                         {/* Authentication Links for Mobile */}
                         <div className="mt-6 flex flex-col space-y-2 border-t border-gray-600 pt-4">
                             {auth.user ? (
                                 auth.user.roles && (
                                     auth.user.roles.some(role => role.name === 'admin') ? (
-                                        <Link href={route('admin.dashboard')} className="hover:text-[#FF2D20]">
+                                        <Link href={route('admin.dashboard')} className="hover:text-primary-500">
                                             Dashboard
                                         </Link>
                                     ) : auth.user.roles.some(role => role.name === 'pengelola proyek') ? (
-                                        <Link href={route('project-manager.dashboard')} className="hover:text-[#FF2D20]">
+                                        <Link href={route('project-manager.dashboard')} className="hover:text-primary-500">
                                             Dashboard
                                         </Link>
                                     ) : auth.user.roles.some(role => role.name === 'donatur receiver') ? (
-                                        <Link href={route('donation-receiver.dashboard')} className="hover:text-[#FF2D20]">
+                                        <Link href={route('donation-receiver.dashboard')} className="hover:text-primary-500">
                                             Dashboard
                                         </Link>
                                     ) : (
-                                        <Link href={route('dashboard')} className="hover:text-[#FF2D20]">
+                                        <Link href={route('dashboard')} className="hover:text-primary-500">
                                             Dashboard
                                         </Link>
                                     )
                                 )
                             ) : (
                                 <>
-                                    <button onClick={() => setIsLoginOpen(true)} className="text-gray-300 hover:text-[#FF2D20] font-semibold">
+                                    <button onClick={() => setIsLoginOpen(true)} className="text-gray-300 hover:text-primary-500 font-semibold">
                                         Log in
                                     </button>
-                                    <button onClick={() => setIsRegisterOpen(true)} className="text-gray-300 hover:text-[#FF2D20] font-semibold mt-1">
+                                    <button onClick={() => setIsRegisterOpen(true)} className="text-gray-300 hover:text-primary-500 font-semibold mt-1">
                                         Register
                                     </button>
                                 </>
@@ -313,7 +316,7 @@ const ProjectList = ({ auth, laravelVersion, phpVersion, isLoading}) => {
                 <main>
                     {/* Success Message */}
                     {successMessage && (
-                        <div className="alert alert-success bg-green-100 text-green-800 p-4 mb-6 rounded-md">
+                        <div className="alert alert-success bg-primary-100 text-primary-800 p-4 mb-6 rounded-md">
                             {successMessage}
                         </div>
                     )}
@@ -387,7 +390,7 @@ const ProjectList = ({ auth, laravelVersion, phpVersion, isLoading}) => {
                                 title="Daftar Proyek"
                                 className="text-4xl font-bold text-gray-800 dark:text-white mb-2 
                                         relative inline-block after:content-[''] after:absolute 
-                                        after:w-1/2 after:h-1 after:bg-[#FF2D20] after:left-0 
+                                        after:w-1/2 after:h-1 after:bg-primary-500 after:left-0 
                                         after:-bottom-2"
                             />
                         </div>
@@ -419,8 +422,8 @@ const ProjectList = ({ auth, laravelVersion, phpVersion, isLoading}) => {
                                                 title={project.namaProyek}
                                                 description={project.deskripsiProyek}
                                             >
-                                                <button className="w-full px-4 py-2 bg-[#FF2D20] text-white rounded-lg
-                                                            hover:bg-[#e0241c] transform transition-all duration-300
+                                                <button className="w-full px-4 py-2 bg-primary-500 text-white rounded-lg
+                                                            hover:bg-primary-600 transform transition-all duration-300
                                                             hover:-translate-y-1 hover:shadow-lg">
                                                     Lihat Detail
                                                 </button>
@@ -438,17 +441,17 @@ const ProjectList = ({ auth, laravelVersion, phpVersion, isLoading}) => {
                 </main>
 
                 <footer className="footer py-12 px-6 bg-gray-800 text-gray-300 flex flex-col md:flex-row justify-between items-center space-y-8 md:space-y-0">
-                    <div className="footer-info text-center md:text-left">z
-                        <h2 className="text-2xl font-bold text-white">Sustainable Community</h2>
-                        <p className="mt-2 text-sm">Komunitas Perubahan Sejak 2024</p>
-                        <p className="mt-4 text-xs text-gray-400">© 2024 Sustainable Community Hub. All rights reserved.</p>
+                    <div className="footer-info text-center md:text-left">
+                        <h2 className="text-2xl font-bold text-white">UPGRISPeduli Community</h2>
+                        <p className="mt-2 text-sm">Komunitas Perubahan Mahasiswa UPGRIS</p>
+                        <p className="mt-4 text-xs text-gray-400">© 2025 UPGRISPeduli Community. All rights reserved.</p>
                     </div>
 
                     {/* Center Section - CTA to Donate */}
                     <div className="footer-cta text-center md:text-left">
                         <h3 className="text-lg font-semibold text-white mb-2">Bantu Kami Menjaga Lingkungan</h3>
                         <p className="text-sm text-gray-300 mb-4">Setiap donasi membantu kami menciptakan perubahan nyata bagi lingkungan.</p>
-                        <button className="px-6 py-2 bg-[#FF2D20] text-white font-semibold rounded-full hover:bg-[#e0241c] shadow-lg transition ease-in-out duration-300 transform hover:scale-105"
+                        <button className="px-6 py-2 bg-primary-500 text-white font-semibold rounded-full hover:bg-primary-600 shadow-lg transition ease-in-out duration-300 transform hover:scale-105"
                                 onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
                             Donasi Sekarang
                         </button>

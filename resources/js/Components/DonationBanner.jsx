@@ -11,7 +11,7 @@ function DonationBanner() {
                 
                 {/* Progress Bar */}
                 <div className="w-full max-w-md bg-gray-300 dark:bg-gray-700 rounded-full overflow-hidden mb-4">
-                    <div className="bg-green-500 text-xs font-bold text-white text-center p-1" style={{ width: "50%" }}>
+                    <div className="bg-primary-500 text-xs font-bold text-white text-center p-1" style={{ width: "50%" }}>
                         50% of Goal Achieved
                     </div>
                 </div>
@@ -28,7 +28,7 @@ function DonationBanner() {
 
                 {/* Call-to-Action Button */}
                 <button 
-                    className="px-8 py-3 bg-white text-[#FF2D20] font-bold rounded-full shadow-lg transition ease-in-out duration-300 transform hover:scale-105 hover:bg-gray-100 animate-bounce"
+                    className="px-8 py-3 bg-white text-primary-500 font-bold rounded-full shadow-lg transition ease-in-out duration-300 transform hover:scale-105 hover:bg-gray-100 animate-bounce"
                     onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                 >
                     Donasi Sekarang

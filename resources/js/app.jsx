@@ -13,7 +13,7 @@ createInertiaApp({
 });
 
 
-const appName = import.meta.env.VITE_APP_NAME || 'Laravel';
+const appName = import.meta.env.VITE_APP_NAME || 'UPGRISPeduli';
 
 createInertiaApp({
     title: (title) => `${title} - ${appName}`,

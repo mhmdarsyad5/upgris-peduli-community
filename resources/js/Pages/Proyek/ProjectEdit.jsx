@@ -83,7 +83,7 @@ const ProjectEdit = () => {
                         onChange={(e) => setData('namaProyek', e.target.value)} 
                         className="w-full border border-gray-300 dark:border-gray-600 rounded-lg p-3 text-gray-900 dark:text-gray-200 bg-gray-50 dark:bg-gray-700"
                     />
-                    {errors.namaProyek && <span className="text-red-500 text-sm mt-1">{errors.namaProyek}</span>}
+                    {errors.namaProyek && <span className="text-primary-500 text-sm mt-1">{errors.namaProyek}</span>}
                 </div>
 
                 {/* Deskripsi Proyek */}
@@ -95,7 +95,7 @@ const ProjectEdit = () => {
                         onChange={(e) => setData('deskripsiProyek', e.target.value)} 
                         className="w-full border border-gray-300 dark:border-gray-600 rounded-lg p-3 text-gray-900 dark:text-gray-200 bg-gray-50 dark:bg-gray-700 h-32"
                     />
-                    {errors.deskripsiProyek && <span className="text-red-500 text-sm mt-1">{errors.deskripsiProyek}</span>}
+                    {errors.deskripsiProyek && <span className="text-primary-500 text-sm mt-1">{errors.deskripsiProyek}</span>}
                 </div>
 
                 {/* Status Proyek */}
@@ -109,7 +109,7 @@ const ProjectEdit = () => {
                         <option value="Aktif">Aktif</option>
                         <option value="Nonaktif">Nonaktif</option>
                     </select>
-                    {errors.statusProyek && <span className="text-red-500 text-sm mt-1">{errors.statusProyek}</span>}
+                    {errors.statusProyek && <span className="text-primary-500 text-sm mt-1">{errors.statusProyek}</span>}
                 </div>
 
                 {/* Tanggal Mulai */}
@@ -121,7 +121,7 @@ const ProjectEdit = () => {
                         onChange={(e) => setData('start_date', e.target.value)}
                         className="w-full border border-gray-300 dark:border-gray-600 rounded-lg p-3 text-gray-900 dark:text-gray-200 bg-gray-50 dark:bg-gray-700"
                     />
-                    {errors.start_date && <span className="text-red-500 text-sm mt-1">{errors.start_date}</span>}
+                    {errors.start_date && <span className="text-primary-500 text-sm mt-1">{errors.start_date}</span>}
                 </div>
 
                 {/* Jumlah Partisipan yang Dibutuhkan */}
@@ -134,7 +134,7 @@ const ProjectEdit = () => {
                         onChange={(e) => setData('required_participants', e.target.value)}
                         className="w-full border border-gray-300 dark:border-gray-600 rounded-lg p-3 text-gray-900 dark:text-gray-200 bg-gray-50 dark:bg-gray-700"
                     />
-                    {errors.required_participants && <span className="text-red-500 text-sm mt-1">{errors.required_participants}</span>}
+                    {errors.required_participants && <span className="text-primary-500 text-sm mt-1">{errors.required_participants}</span>}
                 </div>
 
                 {/* Gambar Proyek */}
@@ -144,7 +144,7 @@ const ProjectEdit = () => {
                         <span className="text-lg font-semibold">Pilih Gambar</span>
                         <input type="file" onChange={handleFileChange} className="hidden" />
                     </label>
-                    {errors.image && <span className="text-red-500 text-sm mt-1">{errors.image}</span>}
+                    {errors.image && <span className="text-primary-500 text-sm mt-1">{errors.image}</span>}
                     {preview && (
                         <div className="mt-4">
                             <img src={preview} alt="Preview Gambar" className="w-full h-64 object-cover rounded-lg shadow-lg border border-gray-300 dark:border-gray-600" />
@@ -156,7 +156,7 @@ const ProjectEdit = () => {
                 <div className="flex justify-center mt-8">
                     <button
                         type="submit"
-                        className="px-8 py-3 bg-[#FF2D20] text-white font-bold rounded-lg shadow-md hover:bg-[#e0241c] transition duration-300 ease-in-out disabled:opacity-50"
+                        className="px-8 py-3 bg-primary-500 text-white font-bold rounded-lg shadow-md hover:bg-[#e0241c] transition duration-300 ease-in-out disabled:opacity-50"
                         disabled={processing}
                     >
                         {processing ? 'Memproses...' : 'Update Proyek'}

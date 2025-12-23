@@ -26,7 +26,7 @@ export default function DeleteButton({ project }) {
     return (
         <button
             onClick={handleDelete}
-            className="group flex items-center gap-2 px-6 py-3 bg-red-500 text-white font-semibold rounded-lg shadow-lg hover:bg-red-600 hover:shadow-xl transition duration-200 ease-in-out transform hover:scale-105"
+            className="group flex items-center gap-2 px-6 py-3 bg-slate-500 text-white font-semibold rounded-lg shadow-lg hover:bg-slate-600 hover:shadow-xl transition duration-200 ease-in-out transform hover:scale-105"
         >
             <svg
                 xmlns="http://www.w3.org/2000/svg"

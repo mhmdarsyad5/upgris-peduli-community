@@ -134,7 +134,7 @@ export default function DonationFormPage({ donationRequest }) {
                             className="w-full border border-gray-300 dark:border-gray-600 rounded-lg p-3 text-gray-900 dark:text-gray-200 bg-gray-50 dark:bg-gray-700"
                             required
                         />
-                        {errors.amount && <p className="text-red-500 text-sm mt-1">{errors.amount}</p>}
+                        {errors.amount && <p className="text-primary-500 text-sm mt-1">{errors.amount}</p>}
                         <p className="text-gray-700 dark:text-gray-300 mt-2">
                             Jumlah Donasi: {data.amount ? formatCurrency(data.amount) : '0.000'}
                         </p>
@@ -153,7 +153,7 @@ export default function DonationFormPage({ donationRequest }) {
                                 className="w-full border border-gray-300 dark:border-gray-600 rounded-lg p-3 text-gray-900 dark:text-gray-200 bg-gray-50 dark:bg-gray-700 h-32"
                                 required
                             ></textarea>
-                            {errors.item_description && <p className="text-red-500 text-sm mt-1">{errors.item_description}</p>}
+                            {errors.item_description && <p className="text-primary-500 text-sm mt-1">{errors.item_description}</p>}
                         </div>
                         <div>
                             <label className="block text-lg font-semibold text-gray-700 dark:text-gray-300 mb-2">
@@ -163,7 +163,7 @@ export default function DonationFormPage({ donationRequest }) {
                                 <span className="text-lg font-semibold">Pilih Gambar</span>
                                 <input type="file" onChange={handleImageChange} className="hidden" />
                             </label>
-                            {errors.item_image && <p className="text-red-500 text-sm mt-1">{errors.item_image}</p>}
+                            {errors.item_image && <p className="text-primary-500 text-sm mt-1">{errors.item_image}</p>}
                             {preview && (
                                 <div className="mt-4">
                                     <img
